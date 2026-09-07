@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const apiRoutes = require('./routes/api');
 const { PORT, API_KEY } = require('./config');
+const { startBot } = require('./bot/telegramBot');
 
 const app = express();
 
@@ -22,3 +23,6 @@ if (!API_KEY) {
 app.listen(PORT, () => {
   console.log(`Majestic Mini App запущен на порту ${PORT}`);
 });
+
+startBot();
+
