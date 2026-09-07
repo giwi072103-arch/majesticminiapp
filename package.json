@@ -1,0 +1,19 @@
+{
+  "name": "majestic-miniapp",
+  "version": "1.0.0",
+  "description": "Telegram Mini App — универсальный клиент Majestic RP API",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "node-fetch": "^2.7.0",
+    "dotenv": "^16.4.5"
+  }
+}
