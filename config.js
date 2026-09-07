@@ -10,5 +10,15 @@ module.exports = {
   PORT: process.env.PORT || 3000,
   // Лимит самого Majestic API: 5 запросов / 60 сек — держим кэш чуть длиннее окна
   CACHE_TTL_MS: 45 * 1000,
+
+  // --- Telegram-бот ---
+  TELEGRAM_BOT_TOKEN: process.env.TELEGRAM_BOT_TOKEN || '',
+  // Публичный URL мини-аппа, который откроется по кнопке в боте.
+  // Railway сам прокидывает свой домен в RAILWAY_PUBLIC_DOMAIN — если задан,
+  // используем его, иначе берём APP_URL из Variables вручную.
+  APP_URL:
+    process.env.APP_URL ||
+    (process.env.RAILWAY_PUBLIC_DOMAIN ? `https://${process.env.RAILWAY_PUBLIC_DOMAIN}` : ''),
 };
+
 
