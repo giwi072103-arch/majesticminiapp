@@ -2,17 +2,23 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Majestic RP — клиент</title>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="bg-blobs" aria-hidden="true">
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+  </div>
+
   <header>
     <h1>Majestic RP</h1>
-    <div id="serverBadge"></div>
   </header>
 
+  <div id="serverBar"></div>
   <nav id="tabs"></nav>
 
   <main id="content">
@@ -22,3 +28,4 @@
   <script src="app.js"></script>
 </body>
 </html>
+
