@@ -3,9 +3,12 @@ require('dotenv').config();
 module.exports = {
   // Ключ выдаётся на id.majestic-rp.ru → API → "Получить ключ"
   API_KEY: process.env.MAJESTIC_API_KEY || '',
-  BASE_URL: 'https://id.majestic-rp.ru/v1/ext',
-  DEFAULT_SERVER_ID: process.env.MAJESTIC_SERVER_ID || '1',
+  // Реальный хост API (не id.majestic-rp.ru — тот отдаёт HTML личного кабинета)
+  BASE_URL: process.env.MAJESTIC_API_BASE_URL || 'https://api.majestic-files.net/v1/ext',
+  // serverId — строковый код сервера, например "RU1", не число
+  DEFAULT_SERVER_ID: process.env.MAJESTIC_SERVER_ID || 'RU1',
   PORT: process.env.PORT || 3000,
   // Лимит самого Majestic API: 5 запросов / 60 сек — держим кэш чуть длиннее окна
   CACHE_TTL_MS: 45 * 1000,
 };
+
